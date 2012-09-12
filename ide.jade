@@ -1,0 +1,17 @@
+include ../widget/sidebar
+
+append layout.styles
+  link(rel='stylesheet', href="/stylesheets/ide.css")
+append layout.scripts
+  script(type='text/javascript', src="/javascripts/ide.js");
+
+mixin ide
+  .ide
+    +sidebar-left("collapsible resizable")
+      button#save(class="btn", type="button") Save
+      button#compile(class="btn", type="button") Compile
+      #tree
+    .vsplit
+      mixin tabbar
+      .editor-container
+        #editor(style='position:relative;width:100%;min-height:500px;display:inline-block;')
