@@ -1,8 +1,18 @@
-include ../widget/sidebar
+include app/views/widget/sidebar
 
 append layout.styles
   link(rel='stylesheet', href="/stylesheets/ide.css")
-append layout.scripts
+  link(rel='stylesheet', href="/stylesheets/jquery.contextMenu.css")
+append layout.scripts  
+  script(type='text/javascript', src="/javascripts/ace_2/ace.js")
+  script(type='text/javascript', src="/javascripts/superagent.min.js")
+  script(type='text/javascript', src="/javascripts/vfs-client.js")
+  script(type='text/javascript', src="/javascripts/eventemitter2.js")
+  script(type='text/javascript', src="/javascripts/jquery.contextMenu.js")
+  script(type='text/javascript', src="/javascripts/filetree.js")
+  script(type='text/javascript', src='/socket.io/socket.io.js')
+  script(type='text/javascript', src='/javascripts/monitor.js')
+  script(type='text/javascript', src="/javascripts/editor.js");
   script(type='text/javascript', src="/javascripts/ide.js");
 
 mixin ide
