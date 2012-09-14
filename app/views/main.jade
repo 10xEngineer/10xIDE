@@ -1,0 +1,30 @@
+extends layout
+
+include widget/tabbar
+include widget/sidebar
+include ../../ide
+
+append layout.scripts
+  //- script(type='text/javascript', src="/javascripts/views/lessons/programming.js")
+
+  // For Share JS
+  // script(type='text/javascript', src="/javascripts/share/bcsocket.js")
+  // script(type='text/javascript', src="/share/share.js")
+  // script(type='text/javascript', src="/share/json.js")
+  // script(type='text/javascript', src="/javascripts/share/ace.js")
+  // script(type='text/javascript', src="/javascripts/share/chat.js")
+
+append layout.styles
+  link(rel='stylesheet', href="/stylesheets/views/main.css")
+
+block layout.body
+  .main.container
+
+    div#header
+      //- TODO:: Re write header
+    .row-fluid
+    
+      +sidebar-right("collapsible resizable")
+        div#chat
+
+      mixin ide
