@@ -1,5 +1,20 @@
 {
   "name" : "10xIDE",
   "version" : "0.0.1",
-  "directories.lib" : "."
+  "directories.lib" : ".",
+  "dependencies" : {
+    "async" : "latest",
+    "connect-redis" : "latest",
+    "express" : "2.x",
+    "jade" : "latest",
+    "longjohn" : "latest",
+    "mongo-vfs": "git://github.com/10xEngineer/mongo-vfs.git",
+    "mongo-vfs-http-adapter": "git://github.com/10xEngineer/mongo-vfs-http-adapter.git",
+    "nconf" : "latest",
+    "nib" : "latest",
+    "redis" : "latest",
+    "socket.io" : "latest",
+    "stylus" : "latest",
+    "winston" : "latest"
+  }
 }
