@@ -9,12 +9,44 @@
       top 28px
       bottom 58px
       overflow scroll
-    >.lessonBar
-      position absolute
-      bottom 0px
-  ._breadcrumb
-    position absolute
-    bottom 0px
+  .buttons-bar
+    height 35px
+    background: rgb(207, 207, 207); /* Old browsers */
+    background: linear-gradient(top, rgba(50, 50, 50, 1) 0%, rgba(30, 30, 30, 1) 100%);
+    border-top: 1px solid #444;
+    
+    .image-button
+      background none
+      border none
+      display block
+      width 27px
+      height 27px
+      text-indent -9999px
+      float left
+      margin 3px 0 3px 3px
+      padding 0
+      background-repeat no-repeat
+      background-position center center
+      background-size 16px 16px
+      border-left 1px solid rgba(0,0,0,0.1)
+      border-top 1px solid rgba(0,0,0,0.1)
+      border-bottom 1px solid rgba(255,255,255,0.1)
+      border-right 1px solid rgba(255,255,255,0.1)
+      border-radius 4px
+    .image-button:hover
+      background-color rgba(255,255,255,0.05)
+
+    .image-button.save-button
+      background-image url('/img/save-button.png')
+
+    .image-button.compile-button
+      background-image url('/img/compile-button.png')
+
+    .image-button.newfile-button
+      background-image url('/img/newfile-button.png')
+
+    .image-button.newfolder-button
+      background-image url('/img/newfolder-button.png')
 
   ul.fileTree {
     font-family: Verdana, sans-serif;
@@ -63,3 +95,5 @@
   #tabContainer > li.active > a > i.closeTab {
     display : inline-block;
   }
+  #editor
+    height 1000px

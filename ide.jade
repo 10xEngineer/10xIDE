@@ -18,10 +18,17 @@ append layout.scripts
 mixin ide
   .ide
     +sidebar-left("collapsible resizable")
-      button#save(class="btn", type="button") Save
-      button#compile(class="btn", type="button") Compile
+      .buttons-bar
+        button#save(title="Save",class="image-button save-button", type="button") Save
+        button#compile(title="Compile",class="image-button compile-button", type="button") Compile
+        button#newfile(title="New File",class="image-button newfile-button", type="button") New File
+        button#newfolder(title="New Folder",class="image-button newfolder-button", type="button") New Folder
+      //- button#save(class="btn", type="button") Save
+      //- button#compile(class="btn", type="button") Compile
+      
+      
       #tree
     .vsplit
       mixin tabbar
       .editor-container
-        #editor(style='position:relative;width:100%;min-height:500px;display:inline-block;')
+        #editor(style='position:relative;width:100%;min-height:100%;margin-bottom:-100px;height:100%;display:inline-block;')

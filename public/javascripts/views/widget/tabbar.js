@@ -69,20 +69,40 @@ TabBar = (function() {
   
   TabBar.prototype.createTabElement = function(id, title) {
     var _self = this;
+    // var element = $('<div/>', {
+    //   'class' : 'tab',
+    //   text    : title
+    // })
+    // .append($('<div/>', {
+    //   'class' : 'loader'
+    // }))
+    // .append($('<a/>', {
+    //   'class' : 'close_button',
+    //   text    : 'x'
+    // })
     var element = $('<div/>', {
-      'class' : 'tab',
-      text    : title
+      'class':'tab'
     })
     .append($('<div/>', {
-      'class' : 'loader'
+      'class':'left-mask'
+    }).append('<span/>'))
+    .append($('<a/>', {
+      'class':'hit-area',
+      text:title
+    }))
+    .append($('<div/>', {
+      'class':'right-mask'
+    }).append('<span/>'))
+    .append($('<div/>', {
+      'class':'loader'
     }))
     .append($('<a/>', {
-      'class' : 'close_button',
-      text    : 'x'
+      'class':'close_button',
+      text:'x'
     })
-      .click(function(event) {
-        _self.removeTab(id);
-        return event.stopPropagation();
+    .click(function(event) {
+      _self.removeTab(id);
+      return event.stopPropagation();
       })
     )
     .click(function() {
